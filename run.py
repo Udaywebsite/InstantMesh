@@ -145,7 +145,7 @@ if os.path.isdir(args.input_path):
     input_files = [
         os.path.join(args.input_path, file) 
         for file in os.listdir(args.input_path) 
-        if file.endswith('.png') or file.endswith('.jpg') or file.endswith('.webp')
+        if file.endswith(('.png', '.jpg')) or file.endswith('.webp')
     ]
 else:
     input_files = [args.input_path]
