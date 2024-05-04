@@ -58,7 +58,7 @@ class DinoWrapper(nn.Module):
         return last_hidden_states
 
     def _freeze(self):
-        print(f"======== Freezing DinoWrapper ========")
+        print("======== Freezing DinoWrapper ========")
         self.model.eval()
         for name, param in self.model.named_parameters():
             param.requires_grad = False

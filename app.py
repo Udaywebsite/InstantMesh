@@ -178,7 +178,7 @@ def make3d(images):
     images = images.unsqueeze(0).to(device)
     images = v2.functional.resize(images, (320, 320), interpolation=3, antialias=True).clamp(0, 1)
 
-    mesh_fpath = tempfile.NamedTemporaryFile(suffix=f".obj", delete=False).name
+    mesh_fpath = tempfile.NamedTemporaryFile(suffix=".obj", delete=False).name
     print(mesh_fpath)
     mesh_basename = os.path.basename(mesh_fpath).split('.')[0]
     mesh_dirname = os.path.dirname(mesh_fpath)
